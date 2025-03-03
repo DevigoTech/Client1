@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, ArrowRight, Shield, Clock, Award, Truck, Menu, X, ChevronRight } from 'lucide-react';
+import Contact from './components/Contact';
 
 function App() {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -375,53 +376,7 @@ function App() {
           
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-md p-8 rounded-xl shadow-lg border border-white/10" data-animate>
-              <h3 className="text-2xl font-semibold mb-6 text-white">Request a Quote</h3>
-              <form>
-                <div className="mb-5">
-                  <label htmlFor="name" className="block text-white/80 mb-2 font-medium">Name</label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-white placeholder-white/50"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div className="mb-5">
-                  <label htmlFor="company" className="block text-white/80 mb-2 font-medium">Company</label>
-                  <input 
-                    type="text" 
-                    id="company" 
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-white placeholder-white/50"
-                    placeholder="Your Company"
-                  />
-                </div>
-                <div className="mb-5">
-                  <label htmlFor="email" className="block text-white/80 mb-2 font-medium">Email</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-white placeholder-white/50"
-                    placeholder="Your Email"
-                  />
-                </div>
-                <div className="mb-6">
-                  <label htmlFor="requirements" className="block text-white/80 mb-2 font-medium">Project Requirements</label>
-                  <textarea 
-                    id="requirements" 
-                    rows={4} 
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-white placeholder-white/50"
-                    placeholder="Describe your project requirements, including pipe specifications, quantity, and timeline"
-                  ></textarea>
-                </div>
-                <button 
-                  type="submit" 
-                  className="bg-primary-600 text-white py-3 px-6 rounded-lg hover:bg-primary-700 transition-colors w-full font-medium"
-                >
-                  Submit Request
-                </button>
-              </form>
-            </div>
+            <Contact/>
             
             {/* Contact Information */}
             <div data-animate>
